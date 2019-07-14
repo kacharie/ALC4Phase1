@@ -18,7 +18,7 @@ public class ActivityA extends ActivityB {
         setContentView(R.layout.activity_activity);
 
         setTitle("ALC 4 Phase 1");
-        getSupportActionBar().setTitle("About ALC");
+        getSupportActionBar().setTitle("ALC 4 Phase 1");
 
 
         final Button button = findViewById(R.id.ABOUT_ALC);
