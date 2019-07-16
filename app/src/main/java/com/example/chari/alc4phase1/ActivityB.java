@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class ActivityB extends AppCompatActivity {
 
@@ -27,8 +28,18 @@ public class ActivityB extends AppCompatActivity {
         webSettings.setAllowContentAccess(true);
         webSettings.setLoadsImagesAutomatically(true);
         webView.loadUrl("https://andela.com/alc/");
+
+        class SSLTolerentWebViewClient extends WebViewClient {
+            @Override
+        public void onReceivedSslError(WebView webView, SslErrorHandler handler, SslError error) {
+            handler.proceed(); // Ignore SSL certificate errors
+        }
+
+
     }
-}
+
+
+}}
 
 
 
